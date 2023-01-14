@@ -3,8 +3,9 @@ import App from './App';
 import About from './pages/About';
 import Home from './pages/Home';
 import GoHome from './pages/GoHome';
-import Users from './pages/Users';
-import User from './pages/User';
+import Users from './pages/users/Users';
+import User from './pages/users/User';
+import UserInfo from './pages/users/UserInfo';
 import NotFound from './pages/NotFound';
 import ErrorComponent from './Components/ErrorComponent';
 
@@ -29,7 +30,18 @@ const router = createBrowserRouter([
       {
         path: 'users',
         element: <Users />,
-        children: [{ path: ':userId', element: <User /> }],
+        children: [
+          {
+            path: ':userId',
+            element: <User />,
+            children: [
+              {
+                path: 'info',
+                element: <UserInfo />,
+              },
+            ],
+          },
+        ],
       },
     ],
     errorElement: <NotFound />,

@@ -1,5 +1,5 @@
 import { Link, Outlet } from 'react-router-dom';
-import members from '../data/db';
+import members from '../../data/db';
 
 function Users() {
   return (
