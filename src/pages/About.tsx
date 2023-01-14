@@ -3,7 +3,7 @@ function About() {
 
   return (
     <div>
-      <h1>About</h1>
+      <h1>ERROR</h1>
       <p>{user[0].name}</p>
     </div>
   );

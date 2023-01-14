@@ -15,6 +15,9 @@ function Header() {
           <li>
             <Link to="/gohome">GoHome</Link>
           </li>
+          <li>
+            <Link to="/users">Users</Link>
+          </li>
         </ul>
       </nav>
     </header>
